@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/layout.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="category-header">
+        <h1>Pickups & Trucks</h1>
+    </section>
+
+    <div id="pickup-grid" class="grid-container"></div>
+
+    <script type="module">
+        import { initNavbar } from '../src/components/navbar.js';
+        import { renderFilteredVehicles } from '../src/js/filter.js';
+
+        initNavbar('navbar-placeholder');
+        // This looks for "Pickup" in your vehicles.json
+        renderFilteredVehicles('Pickup', 'pickup-grid');
+    </script>
+</body>
+</html>
