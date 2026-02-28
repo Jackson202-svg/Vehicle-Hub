@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toyota | Vehicle Hub</title>
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="brand-page">
+        <h1>Toyota Lineup</h1>
+        <div id="brand-container">
+            </div>
+    </main>
+
+    <script type="module">
+        import { initNavbar } from '../../src/components/navbar.js';
+        import { getLocalVehicles } from '../../src/js/data.js';
+
+        initNavbar('navbar-placeholder');
+
+        // Logic to show only Toyota cars
+        getLocalVehicles().then(cars => {
+            const toyotaCars = cars.filter(c => c.brand === 'Toyota');
+            console.log("Displaying Toyota models:", toyotaCars);
+        });
+    </script>
+</body>
+</html>
