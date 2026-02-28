@@ -1,0 +1,16 @@
+[
+  {
+    "brand": "Ford",
+    "model": "F-150",
+    "type": "Pickup",
+    "price": 35000,
+    "towing": 14000
+  },
+  {
+    "brand": "Ram",
+    "model": "1500",
+    "type": "Pickup",
+    "price": 36000,
+    "towing": 12750
+  }
+]
